@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma to Next.js Converter</title>
+    <style>
+        /* Basic reset and responsive typography */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        /* Responsive container */
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Navbar styles */
+        
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navbar-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .navbar-menu {
+            display: flex;
+            list-style-type: none;
+        }
+        
+        .navbar-item {
+            margin-left: 1rem;
+        }
+        
+        .navbar-link {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .navbar-toggle {
+            display: none;
+        }
+        /* Hero section */
+        
+        .hero {
+            background-color: #f4f4f4;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        /* Responsive styles */
+        
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #333;
+                padding: 1rem;
+            }
+            .navbar-menu.active {
+                display: flex;
+            }
+            .navbar-item {
+                margin: 0.5rem 0;
+            }
+            .navbar-toggle {
+                display: block;
+                background: none;
+                border: none;
+                color: #fff;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <a href="#" class="navbar-logo">F2N</a>
+                <button class="navbar-toggle" aria-label="Toggle navigation">
+                    ☰
+                </button>
+                <ul class="navbar-menu">
+                    <li class="navbar-item"><a href="#home" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="#about" class="navbar-link">About</a></li>
+                    <li class="navbar-item"><a href="#services" class="navbar-link">Services</a></li>
+                    <li class="navbar-item"><a href="#contact" class="navbar-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>FIGMA TO NEXT JS</h1>
+                <p>Transform your Figma designs into powerful Next.js applications</p>
+                <a href="#contact" class="cta-button">Get Started</a>
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/do-figma-to-nextjs-3hy3KOr9j9n0v1bcjk4YxztE68BZSp.png" alt="Figma to Next.js conversion" width="600" height="400">
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Our Service</h2>
+                <p>We specialize in converting your Figma designs into fully functional Next.js applications. Our process ensures a seamless transition from design to development, maintaining the integrity of your original design while leveraging the power
+                    of Next.js.</p>
+                <h3>Key Features</h3>
+                <ul class="about-features">
+                    <li>Pixel-perfect conversions</li>
+                    <li>Responsive designs</li>
+                    <li>Performance optimization</li>
+                    <li>SEO-friendly structure</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <h3>Figma Design Analysis</h3>
+                        <p>We thoroughly analyze your Figma designs to ensure every detail is captured.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Next.js Component Creation</h3>
+                        <p>We create reusable and efficient Next.js components based on your Figma designs.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Responsive Layout Implementation</h3>
+                        <p>We ensure your design looks great on all devices and screen sizes.</p>
+                    </article>
+                    <article class="service-card">
+                        <h3>Interactive Element Development</h3>
+                        <p>We bring your static designs to life with smooth animations and interactions.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Figma to Next.js Converter. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarToggle = document.querySelector('.navbar-toggle');
+            const navbarMenu = document.querySelector('.navbar-menu');
+
+            navbarToggle.addEventListener('click', function() {
+                navbarMenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
